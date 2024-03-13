@@ -1,0 +1,18 @@
+import tensorflow as tf
+import numpy as np
+
+# gives us 15 random numbers between 1 and 20
+random_numbers = tf.random.uniform(shape=(15 ,), minval=1, maxval=21, dtype=tf.int32)
+random_numbers = tf.random.shuffle(random_numbers)
+random_numbers = np.array(random_numbers)
+
+# Using tensorflow and numpy to reach our results.
+lowest_number = np.min(random_numbers)
+highest_number = np.max(random_numbers)
+mean = np.mean(random_numbers)
+
+# Prints the results
+print("Random Numbers:", random_numbers)
+print("Lowest:", lowest_number)
+print("Highest:", highest_number)
+print("Mean:", mean)
